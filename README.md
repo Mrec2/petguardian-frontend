@@ -1,37 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PetGuardian - Red de Apadrinamiento de Mascotas sin Hogar
 
-## Getting Started
+## Descripción
+PetGuardian es una plataforma full-stack que conecta refugios y rescatistas con personas interesadas en apadrinar mascotas sin hogar. Los usuarios pueden brindar apoyo financiero, emocional o logístico hasta que las mascotas encuentren un hogar definitivo.
 
-First, run the development server:
+## Tecnologías Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Frontend
+- **Next.js**: Desarrollo optimizado con Server-Side Rendering (SSR) y Static Site Generation (SSG) para mejorar la carga de contenido.
+- **Tailwind CSS**: Estilizado rápido y moderno para una mejor experiencia de usuario.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Backend
+- **Spring Boot**: API REST para manejar usuarios, mascotas y donaciones.
+- **Spring Security + JWT**: Autenticación segura.
+- **PostgreSQL/MySQL**: Base de datos para almacenar información relevante.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Extras
+- **Stripe o PayPal**: Procesamiento de donaciones.
+- **Cloudinary/Firebase Storage**: Almacenamiento de imágenes.
+- **Notificaciones por email/SMS**: Para actualizaciones sobre mascotas y padrinos.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Estado Actual del Proyecto
+- [X] Configuración inicial de Next.js y Spring Boot.
+- [X] Creación de la estructura de la base de datos.
+- [X] Implementación del sistema de autenticación con JWT.
+- [X] Desarrollo de los primeros endpoints para gestión de usuarios y mascotas.
+- [X] Implementación del sistema de donaciones.
+- [X] Integración de almacenamiento de imágenes.
+- [X] Notificaciones por email/SMS.
 
-## Learn More
+## Instalación y Uso
 
-To learn more about Next.js, take a look at the following resources:
+### Backend
+1. Clonar el repositorio:
+   ```sh
+   git clone https://github.com/tu-usuario/petguardian.git
+   ```
+2. Ir al directorio del backend:
+   ```sh
+   cd backend
+   ```
+3. Configurar el archivo `application.properties` con la información de la base de datos y JWT.
+4. Ejecutar el proyecto:
+   ```sh
+   mvn spring-boot:run
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Frontend
+1. Ir al directorio del frontend:
+   ```sh
+   cd frontend
+   ```
+2. Instalar dependencias:
+   ```sh
+   npm install
+   ```
+3. Ejecutar el proyecto:
+   ```sh
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contribución
+Si deseas contribuir al proyecto, abre un issue o un pull request con tus cambios.
 
-## Deploy on Vercel
+## Licencia
+Este proyecto está bajo la licencia MIT.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
+**Contacto**: Puedes comunicarte con el equipo de desarrollo a través de [correo o redes sociales].
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# petguardian-frontend
