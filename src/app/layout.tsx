@@ -1,12 +1,13 @@
+import "@/app/globals.css"; 
 import Navbar from "@/components/navbar";
-import "../app/globals.css"; 
+import { roboto } from "./fonts";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <body className="bg-blue-100">
+      <body className={`bg-black text-white h-screen ${roboto.className} antialiased`}>
         <Navbar />
-        <main className="container mx-auto p-4">{children}</main>
+        <main className="text-white container mx-auto ">{children}</main>
       </body>
     </html>
   );

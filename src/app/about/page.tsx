@@ -1,9 +1,12 @@
+import PageContainer from "@/components/PageContainer";
+
 export default function AboutPage() {
-    return (
-      <div>
-        <h1 className="text-3xl font-bold">Sobre Nosotros</h1>
-        <p>Somos una plataforma que ayuda a conectar padrinos con mascotas sin hogar.</p>
-      </div>
-    );
-  }
-  
+  return (
+    <PageContainer title="Sobre Nosotros">
+      <p className=" text-lg">
+        Somos una plataforma que conecta refugios y rescatistas con padrinos que desean ayudar a
+        mascotas en busca de un hogar. 🐶🐱
+      </p>
+    </PageContainer>
+  );
+}

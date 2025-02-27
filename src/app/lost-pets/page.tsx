@@ -1,9 +1,11 @@
+import PageContainer from "@/components/PageContainer";
+
 export default function LostPetsPage() {
-    return (
-      <div>
-        <h1 className="text-3xl font-bold">Mascotas Perdidas</h1>
-        <p>Aquí encontrarás información sobre mascotas que han sido reportadas como perdidas.</p>
-      </div>
-    );
-  }
-  
+  return (
+    <PageContainer title="Mascotas Perdidas">
+      <p className=" text-lg">
+        Aquí encontrarás una lista de mascotas que han sido reportadas como perdidas. Ayúdanos a encontrarlas. 🔍🐾
+      </p>
+    </PageContainer>
+  );
+}
