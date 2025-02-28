@@ -8,10 +8,31 @@ export default function Navbar() {
           🐾 PetGuardian
         </Link>
         <ul className="flex space-x-6">
-          <li><Link href="/about" className="hover:text-yellow-400">Sobre Nosotros</Link></li>
-          <li><Link href="/lost-pets" className="hover:text-yellow-400">Mascotas Perdidas</Link></li>
-          <li><Link href="/found-pets" className="hover:text-yellow-400">Mascotas Encontradas</Link></li>
-          <li><Link href="/contact" className="hover:text-yellow-400">Contáctanos</Link></li>
+          <li>
+            <Link href="/about" className="hover:text-yellow-400">
+              Sobre Nosotros
+            </Link>
+          </li>
+          <li>
+            <Link href="/lost-pets" className="hover:text-yellow-400">
+              Mascotas Perdidas
+            </Link>
+          </li>
+          <li>
+            <Link href="/wallapet" className="hover:text-yellow-400">
+              Wallapet
+            </Link>
+          </li>
+          <li>
+            <Link href="/found-pets" className="hover:text-yellow-400">
+              Mascotas Encontradas
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" className="hover:text-yellow-400">
+              Contáctanos
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
