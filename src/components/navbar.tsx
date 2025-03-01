@@ -18,14 +18,15 @@ export default function Navbar() {
               Mascotas Perdidas
             </Link>
           </li>
-          <li>
-            <Link href="/wallapet" className="hover:text-yellow-400">
-              Wallapet
-            </Link>
-          </li>
+
           <li>
             <Link href="/found-pets" className="hover:text-yellow-400">
               Mascotas Encontradas
+            </Link>
+          </li>
+          <li>
+            <Link href="/wallapet" className="hover:text-yellow-400">
+              Wallapet(En desarrollo)
             </Link>
           </li>
           <li>
