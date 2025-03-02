@@ -22,7 +22,6 @@ export default function Home() {
 
   return (
     <div className="h-auto flex flex-col items-center text-center bg-black text-white px-6">
-      {/* Sección de Introducción */}
       <h1 className="text-5xl font-bold text-yellow-400 mt-16">
         🐾 Bienvenido a PetGuardian 🐱
       </h1>
@@ -32,7 +31,6 @@ export default function Home() {
         comunidad y cambia vidas! ❤️
       </p>
 
-      {/* Botón de Llamada a la API */}
       <button
         onClick={fetchData}
         className="mt-6 px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-500 transition"
@@ -42,7 +40,6 @@ export default function Home() {
       {loading && <p className="mt-4">Cargando...</p>}
       {data && <p className="mt-4 text-lg">{data}</p>}
 
-      {/* Beneficios Claves */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="p-6 bg-gray-800 rounded-lg shadow-lg">
           <h3 className="text-xl font-semibold text-yellow-400">
@@ -71,7 +68,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Estadísticas Simuladas */}
       <div className="mt-12 max-w-4xl text-center">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">
           📊 Nuestro Impacto (Simulación)
@@ -98,7 +94,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ¿Cómo Funciona? */}
       <div className="mt-16">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">
           🐕 ¿Cómo Funciona?
@@ -132,7 +127,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Testimonios */}
       <div className="mt-16">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">
           💬 Lo que dicen nuestros usuarios
@@ -157,7 +151,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Llamada a la Acción */}
       <div className="mt-16">
         <h2 className="text-3xl font-bold text-yellow-400 mb-4">
           🐶 ¡Comienza Hoy Mismo!

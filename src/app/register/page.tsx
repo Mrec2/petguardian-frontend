@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation"; // Importamos useRouter
+import { useRouter } from "next/navigation";
 import Link from "next/link";
-import InitAxios from "@/utils/initAxios"; // Importamos InitAxios
+import InitAxios from "@/utils/initAxios";
 
 export default function RegisterPage() {
-  const router = useRouter(); // Hook para redireccionar
+  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,7 +18,6 @@ export default function RegisterPage() {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Validaciones
     if (!name || !email || !password || !confirmPassword) {
       setError("Todos los campos son obligatorios.");
       return;
@@ -34,15 +33,12 @@ export default function RegisterPage() {
       return;
     }
 
-    // Limpiar errores previos
     setError("");
     setLoading(true);
 
     try {
-      // Llamamos al método de la clase InitAxios
       await InitAxios.registerUser(name, email, password);
 
-      // Redirigir al usuario a la página de éxito
       router.push("/register-success");
     } catch (err: any) {
       setError(err);
@@ -53,19 +49,18 @@ export default function RegisterPage() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-6">
-      {/* Título */}
-      <h1 className="text-4xl font-bold text-yellow-400 mb-6">📝 Crear Cuenta</h1>
+      <h1 className="text-4xl font-bold text-yellow-400 mb-6">
+        📝 Crear Cuenta
+      </h1>
 
-      {/* Contenedor del formulario */}
       <div className="bg-gray-900 p-8 rounded-lg shadow-lg max-w-md w-full">
-        {/* Mensaje de error */}
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
 
-        {/* Formulario */}
         <form onSubmit={handleRegister} className="flex flex-col space-y-4">
-          {/* Nombre */}
           <div>
-            <label className="block text-sm text-gray-400">Nombre Completo</label>
+            <label className="block text-sm text-gray-400">
+              Nombre Completo
+            </label>
             <input
               type="text"
               className="w-full p-3 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:border-yellow-400"
@@ -75,9 +70,10 @@ export default function RegisterPage() {
             />
           </div>
 
-          {/* Correo Electrónico */}
           <div>
-            <label className="block text-sm text-gray-400">Correo Electrónico</label>
+            <label className="block text-sm text-gray-400">
+              Correo Electrónico
+            </label>
             <input
               type="email"
               className="w-full p-3 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:border-yellow-400"
@@ -87,7 +83,6 @@ export default function RegisterPage() {
             />
           </div>
 
-          {/* Contraseña */}
           <div>
             <label className="block text-sm text-gray-400">Contraseña</label>
             <div className="relative">
@@ -108,9 +103,10 @@ export default function RegisterPage() {
             </div>
           </div>
 
-          {/* Confirmar Contraseña */}
           <div>
-            <label className="block text-sm text-gray-400">Confirmar Contraseña</label>
+            <label className="block text-sm text-gray-400">
+              Confirmar Contraseña
+            </label>
             <input
               type="password"
               className="w-full p-3 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:border-yellow-400"
@@ -120,7 +116,6 @@ export default function RegisterPage() {
             />
           </div>
 
-          {/* Botón de registro */}
           <button
             type="submit"
             className="w-full bg-yellow-400 text-black font-bold p-3 rounded-md hover:bg-yellow-500 transition"
@@ -130,11 +125,13 @@ export default function RegisterPage() {
           </button>
         </form>
 
-        {/* Enlace a Login */}
         <div className="mt-4 text-center">
           <p className="text-gray-400 text-sm">
             ¿Ya tienes una cuenta?{" "}
-            <Link href="/login" className="text-yellow-400 hover:text-yellow-500 font-bold">
+            <Link
+              href="/login"
+              className="text-yellow-400 hover:text-yellow-500 font-bold"
+            >
               Inicia sesión aquí
             </Link>
           </p>

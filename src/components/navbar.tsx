@@ -4,12 +4,10 @@ export default function Navbar() {
   return (
     <nav className="bg-gray-900 shadow-lg fixed top-0 w-full z-10">
       <div className="container mx-auto flex justify-between items-center text-white py-4 px-6">
-        {/* Logo */}
         <Link href="/" className="text-3xl font-bold text-yellow-400">
           🐾 PetGuardian
         </Link>
 
-        {/* Menú de Navegación */}
         <ul className="flex space-x-6">
           <li>
             <Link href="/about" className="hover:text-yellow-400">
@@ -38,7 +36,6 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* Enlaces de Login y Registro */}
         <div className="flex space-x-4">
           <Link href="/login">
             <button className="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-yellow-400 hover:text-black transition">

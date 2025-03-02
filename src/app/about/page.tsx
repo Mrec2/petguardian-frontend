@@ -1,7 +1,6 @@
 export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col items-center text-center bg-black text-white px-6 py-12">
-      {/* Introducción */}
       <h1 className="text-5xl font-bold text-yellow-400">🐾 Sobre Nosotros</h1>
       <p className="text-lg text-gray-300 max-w-3xl mt-4">
         En PetGuardian, creemos en un mundo donde cada mascota merece amor y un
@@ -9,7 +8,6 @@ export default function AboutPage() {
         brindar esperanza a animales en situación vulnerable. 🌎🐶🐱
       </p>
 
-      {/* Nuestra Historia */}
       <div className="mt-12 max-w-4xl text-left">
         <h2 className="text-3xl font-bold text-yellow-400 mb-4">
           📜 Nuestra Historia
@@ -39,7 +37,6 @@ export default function AboutPage() {
         <p className="text-gray-300 mt-4">Esto es solo el comienzo. 🐾💙</p>
       </div>
 
-      {/* Misión y Visión */}
       <div className="mt-12 max-w-4xl text-left">
         <h2 className="text-3xl font-bold text-yellow-400 mb-4">
           🎯 Nuestra Misión y Visión
@@ -56,7 +53,6 @@ export default function AboutPage() {
         </p>
       </div>
 
-      {/* Cómo Funciona */}
       <div className="mt-12 max-w-4xl text-left">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">
           🛠️ ¿Cómo Funciona PetGuardian?
@@ -89,7 +85,6 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* Nuestro Equipo */}
       <div className="mt-12 max-w-4xl text-left">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">
           👨‍💻 Detrás de PetGuardian
@@ -114,7 +109,6 @@ export default function AboutPage() {
         </p>
       </div>
 
-      {/* Alianzas y Apoyos */}
       <div className="mt-12 max-w-4xl text-left">
         <h2 className="text-3xl font-bold text-yellow-400 mb-4">
           🤝 Alianzas y Refugios Asociados
@@ -143,7 +137,6 @@ export default function AboutPage() {
         </ul>
       </div>
 
-      {/* Impacto en Números */}
       <div className="mt-12 max-w-4xl text-left">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">
           📊 Nuestro Impacto
