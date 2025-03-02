@@ -1,12 +1,22 @@
 import axios from "axios";
 
 
-const api = axios.create({
-  baseURL: "http://localhost:8080", 
-  timeout: 5000, 
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
+const API_BASE_URL = "http://localhost:8080/api/users";
 
-export default api;
+class InitAxios {
+  
+  static async registerUser(name: string, email: string, password: string) {
+    try {
+      const response = await axios.post(`${API_BASE_URL}/register`, {
+        name,
+        email,
+        password,
+      });
+      return response.data;
+    } catch (error: any) {
+      throw error.response?.data?.message || "Error al registrar el usuario.";
+    }
+  }
+}
+
+export default InitAxios;
