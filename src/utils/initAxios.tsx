@@ -13,9 +13,13 @@ class InitAxios {
         password,
       });
       return response.data;
-    } catch (error: any) {
-      throw error.response?.data?.message || "Error al registrar el usuario.";
+    } catch (error: unknown) {
+      if (axios.isAxiosError(error)) {
+        throw error.response?.data?.message || "Error al registrar el usuario.";
+      }
+      throw new Error("Ocurrió un error desconocido.");
     }
+    
   }
 }
 

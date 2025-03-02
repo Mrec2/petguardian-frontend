@@ -50,9 +50,14 @@ export default function RegisterPage() {
 
       // Redirigir a la página de éxito en caso de éxito
       router.push("/register-success");
-    } catch (err: any) {
-      // Manejar errores de la API
-      setError(err);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Ocurrió un error desconocido.");
+      }
+    
+    
     } finally {
       // Ocultar indicador de carga
       setLoading(false);
