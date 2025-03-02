@@ -1,45 +1,23 @@
 "use client";
 
-import { useState } from "react";
-import api from "@/utils/initAxios";
-
+// Componente principal de la página de inicio
 export default function Home() {
-  const [data, setData] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-
-  const fetchData = async () => {
-    setLoading(true);
-    try {
-      const response = await api.get("/api/message");
-      console.log(response.data);
-      setData(response.data);
-    } catch (error) {
-      console.error("Error al obtener los datos:", error);
-      setData("Error en la petición.");
-    }
-    setLoading(false);
-  };
+  // Función para obtener datos desde el backend
 
   return (
     <div className="h-auto flex flex-col items-center text-center bg-black text-white px-6">
+      {/* Título de bienvenida */}
       <h1 className="text-5xl font-bold text-yellow-400 mt-16">
         🐾 Bienvenido a PetGuardian 🐱
       </h1>
+      {/* Descripción de la plataforma */}
       <p className="text-lg text-gray-300 max-w-3xl mt-4">
         La plataforma que conecta refugios y rescatistas con personas que desean
         apadrinar y ayudar a mascotas en busca de un hogar. ¡Únete a nuestra
         comunidad y cambia vidas! ❤️
       </p>
 
-      <button
-        onClick={fetchData}
-        className="mt-6 px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-500 transition"
-      >
-        Obtener Datos desde el Backend
-      </button>
-      {loading && <p className="mt-4">Cargando...</p>}
-      {data && <p className="mt-4 text-lg">{data}</p>}
-
+      {/* Sección de características de la plataforma */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="p-6 bg-gray-800 rounded-lg shadow-lg">
           <h3 className="text-xl font-semibold text-yellow-400">
@@ -68,6 +46,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Simulación del impacto de la plataforma */}
       <div className="mt-12 max-w-4xl text-center">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">
           📊 Nuestro Impacto (Simulación)
@@ -94,6 +73,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Sección de cómo funciona la plataforma */}
       <div className="mt-16">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">
           🐕 ¿Cómo Funciona?
@@ -127,6 +107,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Sección de testimonios de usuarios */}
       <div className="mt-16">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">
           💬 Lo que dicen nuestros usuarios
@@ -151,6 +132,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Sección de llamada a la acción */}
       <div className="mt-16">
         <h2 className="text-3xl font-bold text-yellow-400 mb-4">
           🐶 ¡Comienza Hoy Mismo!
