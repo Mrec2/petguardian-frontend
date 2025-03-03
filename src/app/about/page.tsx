@@ -1,16 +1,16 @@
 export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col items-center text-center bg-black text-white px-6 py-12">
-      <h1 className="text-5xl font-bold text-yellow-400">🐾 Sobre Nosotros</h1>
+      <h1 className="text-5xl font-bold text-yellow-400"> Sobre Nosotros</h1>
       <p className="text-lg text-gray-300 max-w-3xl mt-4">
         En PetGuardian, creemos en un mundo donde cada mascota merece amor y un
         hogar. Nuestra plataforma une a rescatistas, refugios y padrinos para
-        brindar esperanza a animales en situación vulnerable. 🌎🐶🐱
+        brindar esperanza a animales en situación vulnerable.
       </p>
 
       <div className="mt-12 max-w-4xl text-left">
         <h2 className="text-3xl font-bold text-yellow-400 mb-4">
-          📜 Nuestra Historia
+          Nuestra Historia
         </h2>
         <p className="text-gray-300">
           PetGuardian es un proyecto en desarrollo que nace de la pasión por la
@@ -34,12 +34,12 @@ export default function AboutPage() {
           padrinos, PetGuardian aspira a crecer y marcar la diferencia en el
           mundo del bienestar animal.
         </p>
-        <p className="text-gray-300 mt-4">Esto es solo el comienzo. 🐾💙</p>
+        <p className="text-gray-300 mt-4">Esto es solo el comienzo. </p>
       </div>
 
       <div className="mt-12 max-w-4xl text-left">
         <h2 className="text-3xl font-bold text-yellow-400 mb-4">
-          🎯 Nuestra Misión y Visión
+          Nuestra Misión y Visión
         </h2>
         <p className="text-gray-300 mb-4">
           Nuestra misión es conectar refugios, rescatistas y padrinos en una
@@ -55,7 +55,7 @@ export default function AboutPage() {
 
       <div className="mt-12 max-w-4xl text-left">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">
-          🛠️ ¿Cómo Funciona PetGuardian?
+          ¿Cómo Funciona PetGuardian?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-6 bg-gray-800 rounded-lg shadow-lg">
@@ -87,7 +87,7 @@ export default function AboutPage() {
 
       <div className="mt-12 max-w-4xl text-left">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">
-          👨‍💻 Detrás de PetGuardian
+          Detrás de PetGuardian
         </h2>
         <p className="text-gray-300">
           PetGuardian es un proyecto desarrollado de manera independiente. Como
@@ -111,7 +111,7 @@ export default function AboutPage() {
 
       <div className="mt-12 max-w-4xl text-left">
         <h2 className="text-3xl font-bold text-yellow-400 mb-4">
-          🤝 Alianzas y Refugios Asociados
+          Alianzas y Refugios Asociados
         </h2>
         <p className="text-gray-300">
           Actualmente, PetGuardian es un proyecto en desarrollo y aún no
@@ -131,15 +131,15 @@ export default function AboutPage() {
           colaborar en el futuro:
         </p>
         <ul className="text-gray-300 list-disc ml-6 mt-2">
-          <li>🐶 Refugio Esperanza Animal (simulación)</li>
-          <li>🐱 Asociación Patitas Felices (simulación)</li>
-          <li>🐾 Red de Rescate Animal (simulación)</li>
+          <li> Refugio Esperanza Animal (simulación)</li>
+          <li> Asociación Patitas Felices (simulación)</li>
+          <li> Red de Rescate Animal (simulación)</li>
         </ul>
       </div>
 
       <div className="mt-12 max-w-4xl text-left">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">
-          📊 Nuestro Impacto
+          Nuestro Impacto
         </h2>
         <p className="text-gray-300">
           PetGuardian es un proyecto en desarrollo, por lo que actualmente estos

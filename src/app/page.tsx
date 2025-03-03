@@ -1,27 +1,22 @@
 "use client";
 
-// Componente principal de la página de inicio
 export default function Home() {
-  // Función para obtener datos desde el backend
-
   return (
     <div className="h-auto flex flex-col items-center text-center bg-black text-white px-6">
-      {/* Título de bienvenida */}
       <h1 className="text-5xl font-bold text-yellow-400 mt-16">
-        🐾 Bienvenido a PetGuardian 🐱
+        🐾 Bienvenido a PetGuardian 
       </h1>
-      {/* Descripción de la plataforma */}
+
       <p className="text-lg text-gray-300 max-w-3xl mt-4">
         La plataforma que conecta refugios y rescatistas con personas que desean
         apadrinar y ayudar a mascotas en busca de un hogar. ¡Únete a nuestra
-        comunidad y cambia vidas! ❤️
+        comunidad y cambia vidas! 
       </p>
 
-      {/* Sección de características de la plataforma */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="p-6 bg-gray-800 rounded-lg shadow-lg">
           <h3 className="text-xl font-semibold text-yellow-400">
-            🌟 Encuentra un Compañero
+            Encuentra un Compañero
           </h3>
           <p className="text-gray-300">
             Conecta con mascotas en busca de un hogar amoroso.
@@ -29,7 +24,7 @@ export default function Home() {
         </div>
         <div className="p-6 bg-gray-800 rounded-lg shadow-lg">
           <h3 className="text-xl font-semibold text-yellow-400">
-            💰 Apoya con Donaciones
+             Apoya con Donaciones
           </h3>
           <p className="text-gray-300">
             Cada donación ayuda a alimentar y cuidar a las mascotas rescatadas.
@@ -37,7 +32,7 @@ export default function Home() {
         </div>
         <div className="p-6 bg-gray-800 rounded-lg shadow-lg">
           <h3 className="text-xl font-semibold text-yellow-400">
-            📍 Reporta Mascotas Perdidas
+             Reporta Mascotas Perdidas
           </h3>
           <p className="text-gray-300">
             Ayuda a reunir mascotas con sus dueños mediante nuestro sistema de
@@ -46,10 +41,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Simulación del impacto de la plataforma */}
       <div className="mt-12 max-w-4xl text-center">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">
-          📊 Nuestro Impacto (Simulación)
+           Nuestro Impacto (Simulación)
         </h2>
         <p className="text-gray-300">
           Actualmente, PetGuardian es un proyecto en desarrollo y aún no cuenta
@@ -73,10 +67,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Sección de cómo funciona la plataforma */}
       <div className="mt-16">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">
-          🐕 ¿Cómo Funciona?
+           ¿Cómo Funciona?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-6 bg-gray-800 rounded-lg shadow-lg">
@@ -107,10 +100,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Sección de testimonios de usuarios */}
       <div className="mt-16">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">
-          💬 Lo que dicen nuestros usuarios
+           Lo que dicen nuestros usuarios
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-gray-900 p-6 rounded-lg">
@@ -132,10 +124,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Sección de llamada a la acción */}
       <div className="mt-16">
         <h2 className="text-3xl font-bold text-yellow-400 mb-4">
-          🐶 ¡Comienza Hoy Mismo!
+           ¡Comienza Hoy Mismo!
         </h2>
         <p className="text-gray-300 max-w-lg">
           Explora nuestras mascotas disponibles o regístrate para ser un padrino

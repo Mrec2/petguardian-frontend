@@ -7,7 +7,7 @@ export default function Footer() {
         
        
         <div className="text-center md:text-left mb-4 md:mb-0">
-          <h2 className="text-xl font-bold text-yellow-400">🐾 PetGuardian</h2>
+          <h2 className="text-xl font-bold text-yellow-400"> PetGuardian</h2>
           <p className="text-gray-400 text-sm">Conectando mascotas con familias amorosas desde 2024.</p>
         </div>
 
@@ -38,13 +38,13 @@ export default function Footer() {
        
         <div className="flex space-x-4 mt-4 md:mt-0">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition">
-            📘 Facebook
+             Facebook
           </a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition">
-            🐦 Twitter
+             Twitter
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition">
-            📷 Instagram
+             Instagram
           </a>
         </div>
       </div>

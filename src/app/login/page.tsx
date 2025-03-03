@@ -24,7 +24,7 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-6">
       <h1 className="text-4xl font-bold text-yellow-400 mb-6">
-        🔐 Iniciar Sesión
+         Iniciar Sesión
       </h1>
 
       <div className="bg-gray-900 p-8 rounded-lg shadow-lg max-w-md w-full">
