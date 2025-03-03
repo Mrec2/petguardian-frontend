@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="h-auto flex flex-col items-center text-center bg-black text-white px-6">
       <h1 className="text-5xl font-bold text-yellow-400 mt-16">
-        🐾 Bienvenido a PetGuardian 
+         Bienvenido a PetGuardian 
       </h1>
 
       <p className="text-lg text-gray-300 max-w-3xl mt-4">
