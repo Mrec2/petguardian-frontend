@@ -2,20 +2,37 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import LoginAxios from "@/utils/loginAxios";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
+
+  const router = useRouter();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!email || !password) {
       setError("Todos los campos son obligatorios");
       return;
     }
+
+    try {
+      await LoginAxios.loginUser(email, password);
+      router.push("/login-success"); 
+      
+    }catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Ocurrió un error desconocido.");
+      }
+    } 
 
     console.log("Iniciando sesión con:", { email, password });
     setError("");
