@@ -14,6 +14,8 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
 
+
+  //Revisar esta parte para que cuando sea credenciales incorrectas lo imprima en el front.
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -24,18 +26,22 @@ export default function LoginPage() {
 
     try {
       await LoginAxios.loginUser(email, password);
-      router.push("/login-success"); 
+      const response = await LoginAxios.loginUser(email, password);
+
+      if (response === "Login exitoso") {
+        console.log("Login exitoso");
+        router.push("/login-success");
+      } 
       
     }catch (err: unknown) {
       if (err instanceof Error) {
         setError(err.message);
       } else {
-        setError("Ocurrió un error desconocido.");
+        setError("Contraseña o Email incorrecto");
       }
     } 
 
-    console.log("Iniciando sesión con:", { email, password });
-    setError("");
+  
   };
 
   return (
