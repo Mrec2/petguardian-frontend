@@ -6,7 +6,6 @@ import LoginAxios from "@/utils/loginAxios";
 import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
-
   const router = useRouter();
 
   const [email, setEmail] = useState("");
@@ -14,40 +13,44 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
 
-
   //Revisar esta parte para que cuando sea credenciales incorrectas lo imprima en el front.
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-
+  
     if (!email || !password) {
       setError("Todos los campos son obligatorios");
       return;
     }
-
+  
     try {
-      await LoginAxios.loginUser(email, password);
       const response = await LoginAxios.loginUser(email, password);
-
-      if (response === "Login exitoso") {
-        console.log("Login exitoso");
-        router.push("/login-success");
-      } 
-      
-    }catch (err: unknown) {
+  
+      if (response.token) {
+        // Guardar el token en localStorage (para mantenerlo después de cerrar la pestaña)
+        localStorage.setItem("authToken", response.token);
+  
+        // O usar sessionStorage si solo debe durar la sesión actual
+        // sessionStorage.setItem("authToken", response.token);
+  
+        console.log("Token guardado:", response.token);
+        router.push("/login-success"); // Redirigir tras inicio de sesión exitoso
+      } else {
+        setError("Credenciales incorrectas");
+      }
+    } catch (err: unknown) {
       if (err instanceof Error) {
         setError(err.message);
       } else {
         setError("Contraseña o Email incorrecto");
       }
-    } 
-
-  
+    }
   };
+  
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-6">
       <h1 className="text-4xl font-bold text-yellow-400 mb-6">
-         Iniciar Sesión
+        Iniciar Sesión
       </h1>
 
       <div className="bg-gray-900 p-8 rounded-lg shadow-lg max-w-md w-full">
