@@ -4,16 +4,17 @@ import { useState } from "react";
 import Link from "next/link";
 import LoginAxios from "@/utils/loginAxios";
 import { useRouter } from "next/navigation";
+import { useAuthStore } from "@/hooks/authStore"; 
 
 export default function LoginPage() {
   const router = useRouter();
+  const { login } = useAuthStore(); 
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
 
-  //Revisar esta parte para que cuando sea credenciales incorrectas lo imprima en el front.
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
   
@@ -26,14 +27,13 @@ export default function LoginPage() {
       const response = await LoginAxios.loginUser(email, password);
   
       if (response.token) {
-        // Guardar el token en localStorage (para mantenerlo después de cerrar la pestaña)
-        localStorage.setItem("authToken", response.token);
-  
-        // O usar sessionStorage si solo debe durar la sesión actual
-        // sessionStorage.setItem("authToken", response.token);
-  
-        console.log("Token guardado:", response.token);
-        router.push("/login-success"); // Redirigir tras inicio de sesión exitoso
+        console.log("Token recibido:", response.token);
+
+        // 
+        login(response.token);
+
+       
+        router.push("/login-success"); 
       } else {
         setError("Credenciales incorrectas");
       }
@@ -45,7 +45,6 @@ export default function LoginPage() {
       }
     }
   };
-  
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-6">
