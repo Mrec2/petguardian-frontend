@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useAuthStore } from "@/hooks/authStore"; // ✅ Para obtener el usuario autenticado
+import { useAuthStore } from "@/hooks/authStore"; 
 
 interface Post {
   id: number;
@@ -11,7 +11,7 @@ interface Post {
 }
 
 export default function BoardPage() {
-  const { isAuthenticated } = useAuthStore(); // ✅ Verificamos si el usuario está autenticado
+  const { isAuthenticated, name } = useAuthStore(); 
   const [posts, setPosts] = useState<Post[]>([]);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -29,10 +29,10 @@ export default function BoardPage() {
       id: posts.length + 1,
       title,
       content,
-      author: "Anonymous", // 🔹 Temporalmente, hasta que conectemos con backend
+      author: name || "Anonymous",
     };
 
-    setPosts([newPost, ...posts]); // ✅ Agregamos el nuevo post al inicio de la lista
+    setPosts([newPost, ...posts]); 
     setTitle("");
     setContent("");
     setError("");
