@@ -30,7 +30,7 @@ export default function LoginPage() {
         console.log("Token recibido:", response.token);
 
         // 
-        login(response.token);
+        login(response.token, response.name);
 
        
         router.push("/login-success"); 

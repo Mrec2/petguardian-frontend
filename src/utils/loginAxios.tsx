@@ -10,30 +10,42 @@ class LoginAxios {
         password,
       });
 
+      console.log(" Respuesta del backend en LoginAxios:", response.data); 
+
+      if (!response.data.name) {
+        console.warn(" Advertencia: El nombre del usuario no está presente en la respuesta del backend.");
+      }
+
       return response.data;
     } catch (error: unknown) {
+      console.error(" Error en LoginAxios:", error);
+
       if (axios.isAxiosError(error)) {
+        console.error("Error de Axios:", error.response?.data);
         throw error.response?.data?.message || "Error al iniciar sesión.";
       }
       throw new Error("Ocurrió un error desconocido.");
     }
   }
 
-  // Método para obtener datos protegidos usando el token
   static async getProtectedData() {
-    const token = localStorage.getItem("authToken"); // Recuperar token
+    const token = localStorage.getItem("authToken");
     if (!token) throw new Error("Usuario no autenticado");
 
     try {
       const response = await axios.get(`${API_BASE_URL}/protected-endpoint`, {
         headers: {
-          Authorization: `Bearer ${token}`, // Enviar token en la cabecera
+          Authorization: `Bearer ${token}`,
         },
       });
 
+      console.log("📡 Datos protegidos recibidos:", response.data);
       return response.data;
     } catch (error: unknown) {
+      console.error(" Error obteniendo datos protegidos:", error);
+
       if (axios.isAxiosError(error)) {
+        console.error("Error de Axios:", error.response?.data);
         throw error.response?.data?.message || "Error al obtener datos.";
       }
       throw new Error("Ocurrió un error desconocido.");
