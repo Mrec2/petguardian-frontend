@@ -101,7 +101,7 @@ export default function RegisterPage() {
                 className="absolute inset-y-0 right-3 flex items-center text-gray-400 hover:text-yellow-400"
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? "🙈" : "👁️"}
+                {showPassword ? "ocultar" : "ver"}
               </button>
             </div>
           </div>
